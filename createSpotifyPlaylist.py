@@ -198,13 +198,13 @@ if __name__ == '__main__':
 	token = getToken()
 	sp = spotipy.Spotify(auth=token)
 
-	# createPlaylistFromDir(f"C:/Users/ELLEN JUNKER/Music/Christina Grimmie", "ellen_junker", token, "Christina Grimmie", "Christina Grimmie", True)
+	# createPlaylistFromDir(f"path", "username", token, "playlistName", "description", True)
 
-	directory = "C:/Users/ELLEN JUNKER/Downloads/Spotify/Natalia - Operación Triunfo"
+	directory = ""
 	for folder in listdir(directory):
 		playlistDir = directory + f"/{folder}"
-		username = "ellen_junker"
+		username = ""
 		playlistName = folder
-		description = f"{folder} songs"
+		description = f""
 		public = True
 		createPlaylistFromDir(playlistDir, username, token, playlistName, description, public)
